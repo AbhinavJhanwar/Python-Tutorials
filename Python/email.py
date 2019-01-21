@@ -17,14 +17,14 @@ encodedcontent = base64.b64encode(filecontent)  # base64
 sender = 'server@server.com'
 reciever = 'emailaddress1'
 
-marker = "MT.SINAI"
+marker = "heading"
 
 body ="""
 This is a test email to send an attachement.
 """
 # Define the main headers.
 part1 = """From: From Person <server@server.com>
-To: To Person <abhinav.jhanwar@accenture.com>
+To: To Person <emailaddress1>
 Subject: Sending Attachement
 MIME-Version: 1.0
 Content-Type: multipart/mixed; boundary=%s

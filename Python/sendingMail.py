@@ -11,8 +11,8 @@ from email.mime.base import MIMEBase
 from email import encoders
 import logging
 
-sender = 'AIWIZ@botAgent.com'
-receivers = ['abhinav.jhanwar@accenture.com']
+sender = 'emailaddress'
+receivers = ['emailaddress']
 
 try:
     msg = MIMEMultipart('alternative')
@@ -38,7 +38,7 @@ try:
     print("step1")
     server.starttls()
     print("step2") 
-    #server.login('abhij.1994@gmail.com', "password")
+    #server.login('emailaddress', "password")
     print("step3")
     text = msg.as_string()
     server.sendmail(sender, receivers, text)
