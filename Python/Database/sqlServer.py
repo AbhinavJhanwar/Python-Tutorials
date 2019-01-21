@@ -20,7 +20,7 @@ import pyodbc
                "password = User_Password;"
                "Trusted_Connection = yes;")'''
 
- '''const string CLASS_NAME = "MYWIZARD_JIRA_Populate_Publisher";
+'''const string CLASS_NAME = "MYWIZARD_JIRA_Populate_Publisher";
  NOTIFICATIONQUERY = "SELECT [Name],[Registered] FROM [dbo].[JIRA_SqlDependency];";
  TRUE = "true";
  CREATECMDTXT = "CREATE TABLE [dbo].[JIRA_SqlDependency]([Name][nvarchar](50) NOT NULL,[Registered] [bit] NULL,[LastUpdated][DateTime] NULL)";
@@ -36,8 +36,8 @@ conn = pyodbc.connect("Driver={SQL Server Native Client 11.0};"
                       "Trusted_Connection=yes;")
 with conn:
     cursor = conn.cursor()
-    #cursor.execute("INSERT INTO [master].[dbo].[Jira_Project]([ProjectKey],[ProjectID],[ProjectName],[LastModified],[Lead],[Category])VALUES('BEN1', '10006', 'Benefits', '2018-05-09T14:43:52', 'durga prasanna', 'None')")
-    #cursor.execute("INSERT INTO [master].[dbo].[Jira_Project]([ProjectKey],[ProjectID],[ProjectName],[LastModified],[Lead],[Category])VALUES('CLAI', '10000', 'Claims', '2018-05-09T14:43:52', 'durga prasanna', 'None')")
+    #cursor.execute("INSERT INTO [master].[dbo].[Jira_Project]([ProjectKey],[ProjectID],[ProjectName],[LastModified],[Lead],[Category])VALUES('BEN1', '10006', 'Benefits', '2018-05-09T14:43:52', 'prasanna', 'None')")
+    #cursor.execute("INSERT INTO [master].[dbo].[Jira_Project]([ProjectKey],[ProjectID],[ProjectName],[LastModified],[Lead],[Category])VALUES('CLAI', '10000', 'Claims', '2018-05-09T14:43:52', 'prasanna', 'None')")
     
     cursor.execute('''SELECT TOP (10) [ID]
           ,[ProjectKey]
